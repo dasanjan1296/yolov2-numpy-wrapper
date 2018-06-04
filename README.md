@@ -18,7 +18,7 @@ YOLO V2 doesn't have default support for handling image as numpy array. For that
 
 * Download the weights (YOLO V2 weights are currently not available at official site as they've updated everything V2 to V3. YOLO V2 site is kept alive but source code and weights are again for V3.)
 
-```wget https://www.dropbox.com/s/hvn3qk254wuf0nf/yolov2.weights?dl=0```
+```wget https://www.dropbox.com/s/hvn3qk254wuf0nf/yolov2.weights```
 
 * Run the example python script to count cars using OpenCV. 
 
