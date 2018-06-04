@@ -189,8 +189,16 @@ if __name__ == "__main__":
     # Load the network, MS COCO parameters and YOLO V2 weights
     net = load_net(b"cfg/yolo.cfg", b"yolov2.weights", 0)
     meta = load_meta(b"cfg/coco.data")
+
+    # Read the image using OpenCV
     image = cv2.imread("test_images/cars.jpeg")
-    car_box_list, count = detect_np(net, meta, image, entity_name='car')
+
+    # Detection using detect_np
+    car_box_list, count = detect_np(net, meta, image, entity_name='')
     # person_box_list, count = detect_np(net, meta, image, entity_name='person')
+
+    # Draw the bounding boxes
     im_out = draw_bbox(image, car_box_list)
+
+    # Write it to output.jpeg
     cv2.imwrite('test_images/output.jpeg', im_out)
