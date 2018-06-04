@@ -194,7 +194,7 @@ if __name__ == "__main__":
     image = cv2.imread("test_images/cars.jpeg")
 
     # Detection using detect_np
-    car_box_list, count = detect_np(net, meta, image, entity_name='')
+    car_box_list, count = detect_np(net, meta, image, entity_name='car')
     # person_box_list, count = detect_np(net, meta, image, entity_name='person')
 
     # Draw the bounding boxes
